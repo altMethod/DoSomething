@@ -1,4 +1,4 @@
-# Dosomething
+# DoSomething
 
 DoSomething is a simple todo application using Angular 2, Angular Material and Firebase.
 
