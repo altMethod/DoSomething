@@ -1,0 +1,14 @@
+<div class="md-center">
+  <md-input-container align="end">
+    <input md-input placeholder="What to do?" type="text" [(ngModel)]="newTodo" (keydown.enter)="add()" mdTooltip="Your todos are seen by everyone">
+  </md-input-container>
+</div>
+
+<md-card *ngFor="let todo of todos | async">
+  <md-checkbox [checked]="todo.checked" (change)="toggle(todo)" align="start" [ngStyle]="setStyle(todo)">
+    <span class="todo-title">{{ todo.todo }}</span>
+  </md-checkbox>
+  <md-card-actions class="md-right">
+    <i class="material-icons md-delete" (click)="delete(todo)" mdTooltip="Delete cannot be undone">delete_forever</i>
+  </md-card-actions>
+</md-card>

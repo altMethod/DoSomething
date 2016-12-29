@@ -1,1 +1,68 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '~@angular/material/core/theming/prebuilt/deeppurple-amber.css';
+
+body {
+    font-family: "Roboto";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.625;
+    margin: 0;
+    background-color: #fafafa;
+}
+
+md-toolbar.md-primary {
+    box-shadow: 0 2px 5px rgba(0,0,0,.26);
+    position: fixed;
+    z-index: 1;
+    top: -1px;
+}
+
+.flex {
+    flex: 1 1 auto;
+}
+
+.content {
+    overflow: auto;
+    margin: 110px auto;
+    max-width: 920px;
+}
+
+.need-login {
+    font-size: 20px;
+    text-align: center;
+}
+
+.avatar {
+    border-radius: 50%;
+    border: 2px #fafafa solid;
+    margin-right: 15px;
+    max-width: 45px;
+}
+
+.md-center {
+  text-align: center;
+}
+
+.material-icons.md-delete {
+    color: #F44336;
+    cursor: pointer;
+}
+
+.material-icons.md-inactive {
+    color: #ddd;
+    cursor: pointer;
+}
+
+md-card {
+  max-width: 75%;
+  margin: 20px auto 20px;
+}
+
+.md-right {
+  text-align: right;
+}
+
+.todo-title {
+  padding-left: 5px;
+}
