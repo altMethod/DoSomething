@@ -8,6 +8,9 @@ In Firebase a Google Sign-In Method also is required to run the project.
 ## Running the Project
 
 Run `npm install -g angular-cli` if you do not already have it.
+
 Run `npm install`.
+
 Configure your Firebase settings in `src\app\app-module.ts`.
+
 Run `ng serve` and browse to `http://localhost:4200`.
