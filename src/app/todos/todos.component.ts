@@ -8,19 +8,21 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
   styleUrls: ['./todos.component.css']
 })
 export class TodosComponent implements OnInit {
-  
+
   todos: FirebaseListObservable<any[]>;
   newTodo: string = '';
 
-  constructor(private af: AngularFire) {}
+  constructor(private af: AngularFire) { }
 
   ngOnInit() {
     this.todos = this.af.database.list('/');
   }
-  
+
   add() {
-    this.todos.push({todo: this.newTodo, checked: 0});
-    this.newTodo = '';
+    if (this.newTodo) {
+      this.todos.push({ todo: this.newTodo, checked: 0 });
+      this.newTodo = '';
+    }
   }
 
   delete(todo) {
@@ -29,10 +31,10 @@ export class TodosComponent implements OnInit {
 
   toggle(currentTodo) {
     if (currentTodo.checked == 1) {
-      this.todos.update(currentTodo, {todo: currentTodo.todo, checked: 0})
+      this.todos.update(currentTodo, { todo: currentTodo.todo, checked: 0 })
     }
     else {
-      this.todos.update(currentTodo, {todo: currentTodo.todo, checked: 1})
+      this.todos.update(currentTodo, { todo: currentTodo.todo, checked: 1 })
     }
   }
 
