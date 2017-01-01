@@ -10,7 +10,6 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'DoSomething'
-  user = {};
   displayName: string;
   photoURL: string;
 
@@ -20,7 +19,6 @@ export class AppComponent {
 
     this.angularFire.auth.subscribe(user => {
       if (user) {
-        this.user = user;
         this.displayName = user.google.displayName;
         this.photoURL = user.google.photoURL;
         this.router.navigate(['/todo']);
